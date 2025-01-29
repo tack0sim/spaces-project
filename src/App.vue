@@ -1,7 +1,11 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
+import TopElement from "./components/TopElement.vue";
 </script>
 
-<template></template>
+<template>
+  <Header />
+  <TopElement />
+</template>
 
 <style scoped></style>
