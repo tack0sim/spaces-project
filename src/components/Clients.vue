@@ -37,8 +37,7 @@ import ClientCards from "./ClientCards.vue";
   display: grid;
   min-width: 315px;
   min-height: auto;
-  gap: 10%;
-  overflow: scroll;
+  gap: 2em;
 }
 h3 {
   font-size: var(--h3-size);
