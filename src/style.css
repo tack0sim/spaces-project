@@ -1,9 +1,38 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif,
-    "Epilogue";
+  font-family: Epilogue;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #000000;
+  --h1-size: clamp(
+    4.0625rem,
+    3.6740331491712706rem + 1.6574585635359118vw,
+    5rem
+  );
+  --h2-size: clamp(2rem, 1.792817679558011rem + 0.8839779005524863vw, 2.5rem);
+  --h3-size: clamp(
+    1.6875rem,
+    1.5062154696132597rem + 0.7734806629834254vw,
+    2.125rem
+  );
+  --h4-size: clamp(
+    0.625rem,
+    0.3660220994475138rem + 1.1049723756906078vw,
+    1.25rem
+  );
+  --h5-size: clamp(
+    0.75rem,
+    0.5946132596685083rem + 0.6629834254143646vw,
+    1.125rem
+  );
+  --text-size: clamp(
+    0.8125rem,
+    0.7089088397790055rem + 0.44198895027624313vw,
+    1.0625rem
+  );
+}
+
+body {
+  padding-bottom: 5%;
 }

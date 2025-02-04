@@ -1,14 +1,21 @@
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+
+defineProps({
+  message: String,
+});
+</script>
 
 <template>
   <div>
-    <a href="" class="logo">Analog Spaces</a>
+    <p class="logo">Logo</p>
+    <p id="home-message">{{ message }}</p>
     <ul>
       <li>
         <a href="" class="menuItem">About</a>
       </li>
       <li>
-        <a href="" class="menuItem">Projects</a>
+        <a href="" class="menuItem">Work</a>
       </li>
       <li>
         <a href="" class="menuItem">Contact</a>
@@ -17,4 +24,14 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.logo,
+#home-message {
+  font-size: var(--h4-size);
+  font-weight: 600;
+}
+a.menuItem {
+  font-size: var(--h5-size);
+  font-weight: 400;
+}
+</style>
