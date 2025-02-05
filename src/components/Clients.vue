@@ -3,7 +3,7 @@ import ClientCards from "./ClientCards.vue";
 </script>
 
 <template>
-  <div class="outer">
+  <div class="wrapper outer">
     <div class="inner">
       <h3>Clients</h3>
       <div class="content">
@@ -27,9 +27,6 @@ import ClientCards from "./ClientCards.vue";
 </template>
 
 <style scoped>
-.outer {
-  padding: 60px 30px 90px 30px;
-}
 .inner {
   min-width: 315px;
 }

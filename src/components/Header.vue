@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="wrapper">
     <p class="logo">Logo</p>
     <p id="home-message">{{ message }}</p>
     <ul>

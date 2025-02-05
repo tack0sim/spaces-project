@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
+  <div class="wrapper">
     <div class="topBox"></div>
     <div class="topBoxChild">
       <h4>Branding | Imaging</h4>
