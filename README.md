@@ -1,6 +1,6 @@
 # Landing Page
 
-This is a test project for a landing page for a personal gallery projects.
+This is a test landing page  project for a personal gallery.
 
 The project is powered by Vue 3 and the scafolding is by Vite (more info, see below).
 
@@ -14,7 +14,7 @@ Comments and suggestions welcome! :)
 
 The code is open source.
 The images are credited to the author(s) of the Figma template.
-The images is ./assets/talha/ directory are taken by myself and are protected.
+The images in ./assets/talha/ directory are taken by myself and are protected.
 
 ---
 
