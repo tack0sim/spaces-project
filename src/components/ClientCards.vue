@@ -28,28 +28,42 @@ defineProps({
 </template>
 
 <style scoped>
+@media (min-width: 700px) {
+  .upper {
+    width: 19.5rem;
+    height: auto;
+  }
+  .stars {
+    grid-column-end: auto;
+  }
+}
+@media (min-width: 900px) {
+  .upper {
+    width: 18rem;
+    height: auto;
+  }
+}
 .upper {
   padding: 30px;
   background-color: #ffffd285;
+  border: solid #ffd285;
 }
 .inner {
   display: grid;
+  align-content: center;
+  justify-items: start;
   gap: 20%;
-  min-height: fit-content;
 }
 .rating {
   display: flex;
-  justify-content: flex-start;
+  justify-content: end;
+  align-items: center;
 }
 .stars {
   display: grid;
-  grid-auto-rows: auto;
   margin-left: 5%;
 }
 p {
   font-size: var(--text-size);
-}
-img {
-  vertical-align: middle;
 }
 </style>

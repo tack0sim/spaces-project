@@ -27,6 +27,19 @@ import ClientCards from "./ClientCards.vue";
 </template>
 
 <style scoped>
+@media (min-width: 700px) {
+  .content {
+    display: inline-flex !important;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .content {
+    display: inline-flex !important;
+    justify-content: space-evenly;
+  }
+}
 .inner {
   min-width: 315px;
 }
