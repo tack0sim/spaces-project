@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: #000000;
   --h1-size: clamp(
     4.0625rem,
@@ -60,7 +60,10 @@ ul {
 }
 
 .wrapper {
-  width: min(67.5rem, calc(100% - 6.25rem));
+  width: min(
+    67.5rem,
+    calc(100% - 3.75rem)
+  ); /* offsetting the width to add a margin */
   margin-inline: auto;
   overflow-x: inherit;
 }
