@@ -1,9 +1,20 @@
 <script setup>
-import { defineProps } from "vue";
+import { ref, defineProps } from "vue";
 
 defineProps({
   message: String,
 });
+
+var btn_open = ref(false);
+var btn_close = ref(true);
+
+function hambrgrOpen() {
+  btn_open.value = !btn_open.value;
+}
+
+function hambrgrClose() {
+  btn_open.value = !btn_open.value;
+}
 </script>
 
 <template>
@@ -13,7 +24,12 @@ defineProps({
       <p id="home-message">{{ message }}</p>
     </div>
     <nav>
-      <button id="btn_open" class="burger_menu">
+      <button
+        @click="hambrgrOpen"
+        v-show="!btn_open"
+        :class="{ active: btn_open }"
+        class="btn_open"
+      >
         <svg viewBox="0 0 30 17" width="30" height="17" aria-hidden="true">
           <rect y="7" width="30" height="3"></rect>
           <rect y="14" width="30" height="3"></rect>
@@ -21,8 +37,8 @@ defineProps({
         </svg>
       </button>
 
-      <div class="nav_content">
-        <button id="btn_close" class="nav_close">
+      <div v-show="btn_open" class="nav_content">
+        <button @click="hambrgrClose" :class="{ btn_close }">
           <svg viewBox="0 0 32 31" width="32" height="31" aria-hidden="true">
             <rect
               x="2.91846"
@@ -57,10 +73,11 @@ defineProps({
 </template>
 
 <style scoped>
-.header {
+header {
   display: inline-flex;
   justify-content: space-between;
-  width: 50%;
+  align-items: center;
+  width: 100%;
 }
 .logo,
 #home-message {
@@ -73,6 +90,10 @@ nav {
     background: none;
     border: none;
   }
+  .btn_open {
+    display: block;
+    margin-left: auto;
+  }
   .nav_content {
     @media (max-width: 700px) {
       position: fixed;
@@ -80,9 +101,10 @@ nav {
       background-color: gray;
     }
   }
-  .nav_close {
+  .btn_close {
     display: block;
     margin-left: auto;
+    margin-top: 1rem;
   }
 }
 
@@ -98,16 +120,13 @@ nav {
     align-items: center;
     width: 100%;
   }
-  #btn_close {
+  .btn_close {
     display: none;
   }
   ul,
   li {
     display: inline-flex;
     margin: 0 0 0 0.5rem;
-  }
-  .line {
-    display: none;
   }
 }
 a.menuItem {
