@@ -1,18 +1,15 @@
 <script setup>
 import { ref, defineProps } from "vue";
+import { useMediaQuery } from "@vueuse/core";
 
 defineProps({
   message: String,
 });
 
-var btn_open = ref(false);
-var btn_close = ref(true);
+const btn_open = ref(false);
+const isDesktop = useMediaQuery("(min-width: 700px)");
 
-function hambrgrOpen() {
-  btn_open.value = !btn_open.value;
-}
-
-function hambrgrClose() {
+function hambrgrToggle() {
   btn_open.value = !btn_open.value;
 }
 </script>
@@ -24,8 +21,9 @@ function hambrgrClose() {
       <p id="home-message">{{ message }}</p>
     </div>
     <nav>
+      <!-- Hamburger Button, toggles out of view when clicked -->
       <button
-        @click="hambrgrOpen"
+        @click="hambrgrToggle"
         v-show="!btn_open"
         :class="{ active: btn_open }"
         class="btn_open"
@@ -37,8 +35,9 @@ function hambrgrClose() {
         </svg>
       </button>
 
+      <!-- Menu display -->
       <div v-show="btn_open" class="nav_content">
-        <button @click="hambrgrClose" :class="{ btn_close }">
+        <button @click="hambrgrToggle" class="btn_close">
           <svg viewBox="0 0 32 31" width="32" height="31" aria-hidden="true">
             <rect
               x="2.91846"
@@ -68,6 +67,19 @@ function hambrgrClose() {
           </li>
         </ul>
       </div>
+
+      <!-- Tablet and desktop menu -->
+      <ul v-show="isDesktop" class="menu">
+        <li>
+          <a href="" class="menuItem">About</a>
+        </li>
+        <li>
+          <a href="" class="menuItem">Work</a>
+        </li>
+        <li>
+          <a href="" class="menuItem">Contact</a>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -106,31 +118,31 @@ nav {
     margin-left: auto;
     margin-top: 1rem;
   }
+  ul {
+    margin-left: 0.5rem;
+  }
 }
 
-.burger_menu {
-  display: block;
+a.menuItem {
+  font-size: var(--h5-size);
+  font-weight: 400;
+  color: white;
 }
 
 /** breakpoint for 700px wide and beyond */
 @media (min-width: 700px) {
   nav {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  .btn_close {
-    display: none;
+    .btn_open {
+      display: none;
+    }
   }
   ul,
   li {
     display: inline-flex;
-    margin: 0 0 0 0.5rem;
+    margin: 0 0.5rem 0 0.5rem;
   }
-}
-a.menuItem {
-  font-size: var(--h5-size);
-  font-weight: 400;
+  ul > li > a.menuItem {
+    color: black;
+  }
 }
 </style>

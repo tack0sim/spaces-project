@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <article class="wrapper" id="contact__card">
+  <article class="wrapper contact__card">
     <div class="line"></div>
     <section class="contact">
       <section class="contact__description">
@@ -12,16 +12,29 @@
           to get updates.
         </p>
       </section>
+
+      <!-- Contact form -->
       <section class="contact__form">
         <form action="">
           <fieldset class="form">
-            <input type="text" class="text-field" placeholder="Name" />
-            <input type="text" class="text-field" placeholder="Email" />
+            <input
+              type="text"
+              class="text-field"
+              id="name"
+              placeholder="Name"
+            />
+            <input
+              type="text"
+              class="text-field"
+              id="email"
+              placeholder="Email"
+            />
             <textarea
               rows="5"
               cols=""
               type="textarea"
               class="text-field"
+              id="message"
               placeholder="Type your message here"
             ></textarea>
           </fieldset>
@@ -33,26 +46,6 @@
 </template>
 
 <style scoped>
-@media (min-width: 700px) {
-  #contact__card {
-    margin-top: 1rem;
-  }
-  .contact {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .contact__description {
-    width: 50%;
-  }
-  .contact__form {
-    width: 50%;
-    margin-left: 3rem;
-  }
-  h3 {
-    display: block;
-    margin: 0;
-  }
-}
 .line {
   width: min(67.5rem, calc(100% - 6.25rem));
   height: 0;
@@ -100,5 +93,27 @@ h3 {
 }
 p {
   font-size: var(--text-size);
+}
+
+/** Tablet and desktop breakpoint */
+@media (min-width: 700px) {
+  .contact__card {
+    margin-top: 1rem;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .contact__description {
+    width: 50%;
+  }
+  .contact__form {
+    width: 50%;
+    margin-left: 3rem;
+  }
+  h3 {
+    display: block;
+    margin: 0;
+  }
 }
 </style>
