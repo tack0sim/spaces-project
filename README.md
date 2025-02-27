@@ -23,6 +23,7 @@ The images in ./assets/talha/ directory are taken by myself and are protected.
 ## Approach
 
 A. The project is developed as mobile-first.
+
 B. Accessibility concerns have been taken into consideration and implemented using semantic markup, responsive design and interactivity.
 
 ---
@@ -30,6 +31,7 @@ B. Accessibility concerns have been taken into consideration and implemented usi
 ## Limitations:
 
 A. The project does not have a database.
+
 B. Some accessibility features have not yet been integrated, such as dark mode.
 
 ---
