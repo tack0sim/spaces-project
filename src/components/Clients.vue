@@ -3,10 +3,11 @@ import ClientCards from "./ClientCards.vue";
 </script>
 
 <template>
-  <div class="outer">
-    <div class="inner">
+  <article class="wrapper">
+    <section class="client">
       <h3>Clients</h3>
-      <div class="content">
+      <section class="client__content">
+        <!-- Insert Vue Component ClientCards here-->
         <ClientCards
           review="This is a great portfolio! I recommend it to all my
         colleagues."
@@ -21,19 +22,16 @@ import ClientCards from "./ClientCards.vue";
         the projects. Definitely something special."
           name="Birte C."
         />
-      </div>
-    </div>
-  </div>
+      </section>
+    </section>
+  </article>
 </template>
 
 <style scoped>
-.outer {
-  padding: 60px 30px 90px 30px;
-}
-.inner {
+.client {
   min-width: 315px;
 }
-.content {
+.client__content {
   display: grid;
   min-width: 315px;
   min-height: auto;
@@ -42,5 +40,22 @@ import ClientCards from "./ClientCards.vue";
 h3 {
   font-size: var(--h3-size);
   text-align: center;
+}
+
+/** Tablet breakpoint */
+@media (min-width: 700px) {
+  .client__content {
+    display: inline-flex !important;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+/** Desktop breakpoint */
+@media (min-width: 900px) {
+  .client__content {
+    display: inline-flex !important;
+    justify-content: space-evenly;
+  }
 }
 </style>

@@ -1,9 +1,8 @@
 <script setup></script>
 
 <template>
-  <div>
-    <div class="topBox"></div>
-    <div class="topBoxChild">
+  <article class="wrapper">
+    <section>
       <h4>Branding | Imaging</h4>
       <h1>My awesome portfolio</h1>
       <p>
@@ -11,14 +10,15 @@
         publisher's profile "Anima" at
         https://www.figma.com/community/file/1184894959333450190
       </p>
-    </div>
-    <img
-      src="../assets/topElementImage.png"
-      width="495"
-      height="424"
-      alt="Top Element Image"
-    />
-  </div>
+
+      <img
+        src="../assets/topElementImage.png"
+        width="495"
+        height="424"
+        alt="Top Element Image"
+      />
+    </section>
+  </article>
 </template>
 
 <style scope>

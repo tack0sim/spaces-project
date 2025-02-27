@@ -8,48 +8,71 @@ defineProps({
 </script>
 
 <template>
-  <div class="upper">
-    <div class="inner">
+  <article class="review">
+    <div class="review__inner">
+      <!-- Review -->
       <p>{{ review }}</p>
-      <div class="rating">
+
+      <!-- Author Image -->
+      <section class="review__author">
         <img
           src="/src/assets/authorImages1.png"
           width="50"
           height="50"
           alt="author-image"
         />
-        <div class="stars">
+
+        <!-- Star rating -->
+        <section class="review__stars">
           <img src="/src/assets/rateStars.png" alt="stars-rating" />
           <p>{{ name }}</p>
-        </div>
-      </div>
+        </section>
+      </section>
     </div>
-  </div>
+  </article>
 </template>
 
 <style scoped>
-.upper {
+.review {
   padding: 30px;
   background-color: #ffffd285;
+  border: solid #ffd285;
 }
-.inner {
+.review__inner {
   display: grid;
+  align-content: center;
+  justify-items: start;
   gap: 20%;
-  min-height: fit-content;
 }
-.rating {
+.review__author {
   display: flex;
-  justify-content: flex-start;
+  justify-content: end;
+  align-items: center;
 }
-.stars {
+.review__stars {
   display: grid;
-  grid-auto-rows: auto;
   margin-left: 5%;
 }
 p {
   font-size: var(--text-size);
 }
-img {
-  vertical-align: middle;
+
+/** Tablet breakpoint */
+@media (min-width: 700px) {
+  .review {
+    width: 19.5rem;
+    height: auto;
+  }
+  .review__stars {
+    grid-column-end: auto;
+  }
+}
+
+/** Desktop breakpoint */
+@media (min-width: 900px) {
+  .review {
+    width: 18rem;
+    height: auto;
+  }
 }
 </style>
