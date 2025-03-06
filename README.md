@@ -4,6 +4,8 @@ This is a test project for a landing page for personal gallery projects.
 
 The project is powered by Vue 3 and the scafolding is by Vite (more info, see below).
 
+The project is deployed on Netlify at https://spaces-landing.netlify.app/.
+
 The aim of the project is to practice core Vue.js and SPA functionality such as reactivity, declarative rendering, modular design, attribute bindings and more.
 
 The design template used is from the author 'Anima' @ Figma and is publicly available at https://www.figma.com/community/file/1184894959333450190
