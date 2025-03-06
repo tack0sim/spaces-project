@@ -65,6 +65,13 @@ function hambrgrToggle() {
           <li>
             <a href="" class="menuItem">Contact</a>
           </li>
+          <li>
+            <a
+              href="https://github.com/tack0sim/spaces-project"
+              class="menuItem"
+              >View on GitHub</a
+            >
+          </li>
         </ul>
       </div>
 
@@ -78,6 +85,11 @@ function hambrgrToggle() {
         </li>
         <li>
           <a href="" class="menuItem">Contact</a>
+        </li>
+        <li>
+          <a href="https://github.com/tack0sim/spaces-project" class="menuItem"
+            >View on GitHub</a
+          >
         </li>
       </ul>
     </nav>
