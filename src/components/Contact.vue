@@ -9,7 +9,7 @@
         <p>
           This is a template Figma file. Reach out to me for collaborations and
           project feedbacks. For updates on upcoming projects, write me an email
-          to get updates.
+          to get updates. <br /><br />Talha Minhas 😊
         </p>
       </section>
 
