@@ -7,8 +7,7 @@
       <h1>My awesome portfolio</h1>
       <p>
         This is a template Figma file. For more look up the template at the
-        publisher's profile "Anima" at
-        https://www.figma.com/community/file/1184894959333450190
+        publisher's profile "Anima" <a href="https://www.figma.com/community/file/1184894959333450190">here</a>.
       </p>
 
       <img
