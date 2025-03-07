@@ -2,15 +2,23 @@
 
 <template>
   <article class="wrapper">
-    <section>
-      <h4>Branding | Imaging</h4>
-      <h1>My awesome portfolio</h1>
-      <p>
-        This is a template Figma file. For more look up the template at the
-        publisher's profile "Anima" <a href="https://www.figma.com/community/file/1184894959333450190">here</a>.
-      </p>
-
+    <section id="hero">
+      <section id="hero__content">
+        <h4>Branding | Imaging</h4>
+        <h1>My awesome portfolio</h1>
+        <p>
+          This is a template Figma file. For more, look up the template at the
+          publisher's profile "Anima"
+          <a href="https://www.figma.com/community/file/1184894959333450190"
+            >here</a
+          >.<br /><br />
+          This template is only for test purpose and therefore does not have
+          full functionality of the form element below and the menu links, with
+          the exception of the GitHub link.
+        </p>
+      </section>
       <img
+        id="hero__image"
         src="../assets/topElementImage.png"
         width="495"
         height="424"
@@ -21,10 +29,15 @@
 </template>
 
 <style scope>
+#hero {
+  display: flex;
+  align-items: flex-end;
+}
 h1 {
   font-size: var(--h1-size);
   line-height: 1.1;
   font-weight: 600;
+  margin-block: 2rem;
 }
 h4 {
   font-size: var(--h4-size);

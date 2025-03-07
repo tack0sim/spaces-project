@@ -16,11 +16,11 @@ function hambrgrToggle() {
 
 <template>
   <header class="wrapper">
-    <div class="header">
-      <p class="logo">Logo</p>
-      <p id="home-message">{{ message }}</p>
-    </div>
     <nav>
+      <div class="header">
+        <p class="logo">Logo</p>
+        <p id="home-message">{{ message }}</p>
+      </div>
       <!-- Hamburger Button, toggles out of view when clicked -->
       <button
         @click="hambrgrToggle"
@@ -97,11 +97,10 @@ function hambrgrToggle() {
 </template>
 
 <style scoped>
-header {
-  display: inline-flex;
+.header {
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  width: 50%;
 }
 .logo,
 #home-message {
@@ -110,6 +109,10 @@ header {
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   button {
     background: none;
     border: none;
