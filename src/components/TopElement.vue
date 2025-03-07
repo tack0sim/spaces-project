@@ -20,8 +20,6 @@
       <img
         id="hero__image"
         src="../assets/topElementImage.png"
-        width="495"
-        height="424"
         alt="Top Element Image"
       />
     </section>
@@ -30,8 +28,11 @@
 
 <style scope>
 #hero {
-  display: flex;
-  align-items: flex-end;
+  display: block;
+
+  #hero__image {
+    width: 300px;
+  }
 }
 h1 {
   font-size: var(--h1-size);
@@ -45,5 +46,13 @@ h4 {
 }
 p {
   font-size: var(--text-size);
+}
+
+/** tablet and desktop breakpoint for hero component */
+@media (min-width: 700px) {
+  #hero {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>
